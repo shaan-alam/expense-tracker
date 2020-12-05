@@ -1,0 +1,17 @@
+.btn-primary {
+  border-radius: 8px;
+  border: none;
+  background: $primary-color;
+  color: #fff;
+  padding: 1.2rem 2rem;
+  width: 100%;
+  cursor: pointer;
+  @include box-shadow($primary-color, 0.4);
+  transition: all 0.4s;
+  outline: none;
+
+
+  &:hover {
+    background: darken($primary-color, 10%);
+  }
+}

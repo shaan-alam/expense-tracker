@@ -1,0 +1,16 @@
+.chart-container {
+  height: 100vh;
+  width: 100vw;
+  
+  
+  h1 {
+    color: $primary-color;
+    text-align: center
+  };
+
+  .chartjs-container {
+    height: 100%;
+    width: 80%;
+    margin: auto;
+  }
+}

@@ -1,0 +1,144 @@
+.auth-section {
+  min-height: 100vh;
+  height: auto;
+  width: 100%;
+  display: flex;
+
+  @include tablet {
+    display: block;
+  }
+
+  .auth-area {
+
+    @include tablet {
+      min-height: 100vh;
+      padding: 0;
+      align-items: center;
+      justify-content: center;
+    }
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10rem 0 0 10rem;
+
+    .footer {
+      text-transform: uppercase;
+      color: rgba(0, 0, 0, 0.7);
+      font-size: 80%;
+      margin-bottom: 1rem;
+      font-weight: normal;
+
+      @include tablet {
+        margin-top: 6rem;
+      }
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 4rem;
+      width: 100%;
+
+      @include tablet {
+        justify-content: center;
+      }
+
+      img {
+        @include tablet {
+          width: 15%;
+        }
+        margin-top: 10px;
+        margin-right: 20px;
+      }
+
+      h1 {
+        @include tablet {
+          font-size: 100%;
+        }
+
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+    }
+  }
+
+  .auth-area form {
+    text-align: center;
+  }
+
+  .auth-area form .form-group {
+    margin: 1.5rem 0;
+
+    .form-control {
+      outline: none;
+      background: #fff;
+      border: 2px solid rgba(0, 0, 0, 0.09);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.09);
+      border-radius: 8px;
+      padding: 1.2rem 1rem;
+      width: 100%;
+      transition: all 0.4s;
+
+      &:focus {
+        border: 2px solid lighten($primary-color, 20%);        
+      }
+    }
+
+  }
+
+  small {
+    color: rgba(0, 0, 0, 0.8);    
+
+    @include tablet {
+      margin: 0;
+      text-align: center;
+    }
+    a {
+      color: lighten($primary-color, 5%);
+      text-decoration: none;
+    }
+  }
+
+}
+
+
+.hero {
+  @include tablet {
+    display: none;
+  }
+
+  img:nth-child(1) {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 30%;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  img:nth-child(2) {
+    position: fixed;
+    bottom: 0%;
+    right: 0;
+    width: 20%; 
+    @include tablet {
+      display: none;
+    }
+  }
+
+  img:nth-child(3) {
+    @include tablet {
+      display: none;
+    }
+
+    position: fixed;
+    top: 20%;
+    right: 10%;
+    width: 40%;
+  }
+
+}

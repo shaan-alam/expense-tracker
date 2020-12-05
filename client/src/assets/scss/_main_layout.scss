@@ -1,0 +1,159 @@
+.container {
+  width: 80%;
+  margin: 1rem auto;
+  padding: 4rem 2rem;
+
+  @include small {
+    width: 100%;
+  }
+
+  header { 
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 5%;
+    }
+
+    .main-heading {
+      margin-bottom: 20px;
+      margin-left: 20px;
+      font-size: 120%;
+      color: $primary-color;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+
+      @include small {
+        font-size: 100% !important;
+      }
+    }
+  }
+
+}
+
+
+// overviews section
+.overviews {
+  margin: 4rem 0;
+
+  h1 {
+    @include small {
+      text-align: center;
+    }
+
+    margin: 2rem 0;
+    font-weight: 500;
+  }
+
+  &-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include small {
+      display: block;
+       & > div {
+         margin: 2rem 0;
+       }
+    }
+  }
+
+  &-flex .overview {
+    width: 100%;
+    margin-right: 20px;
+    border-radius: 8px;
+    padding: 2rem;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.0999875),0 -4px 8px rgba(0, 0, 0, 0.0999875);
+
+    h6 {
+      color: rgba(0, 0, 0, 0.5);
+      font-weight: 500;
+      font-size: 110%;
+      margin-bottom: 5px;
+    }
+
+    &:nth-child(1) h2 {
+      color: green;
+    }
+
+    &:nth-child(2) h2 {
+      color: red;
+    }
+
+    &:nth-child(3) h2 {
+      color: $primary-color;
+    }
+  }
+}
+
+// transaction section
+.transactions {
+  margin: 4rem 0;
+
+  h1 {
+    @include small {
+      text-align: center;
+    }
+    
+    margin: 2rem 0;
+    font-weight: 500;
+  }
+
+  .transactions-block {
+    display: block;
+
+    .transaction {
+      width: 100%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.0999875),0 -4px 8px rgba(0, 0, 0, 0.0999875);
+      padding: 2rem 1rem;
+      margin: 1.5rem 0; 
+      border-radius: 8px;
+      transition: all 0.4s;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;         
+
+      &.income {
+        border-right: 5px solid green;
+      }
+
+      &.expense {
+        border-right: 5px solid red;
+      }
+
+      .action .delete {
+        color: $primary-color;
+        text-decoration: none;
+        margin-right: 20px;
+        font-size: 1.5rem;
+        display: none;
+      }
+
+      h2 {
+        font-weight: 400;
+      }
+
+      h5 {
+        color: rgba(0, 0, 0, 0.6);
+        margin-top: 10px;
+        font-weight: 500;
+        font-size: 110%;
+      }
+
+      &:hover {
+        background: $primary-color;
+        color: #fff;
+
+        h5 {
+          color: #fff;
+        }
+
+        .delete {
+          color: #fff;
+          display: block;
+        }
+      }
+    }
+  }
+}
